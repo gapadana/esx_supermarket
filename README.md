@@ -30,7 +30,7 @@ start esx_supermarket
 ```
 - Add items to the shop:
 ```mysql
-	INSERT INTO `shops` (store, item, price) VALUES ('TwentyFourSeven','banana',50),
+	INSERT INTO `shops` (store, item, price) VALUES ('TwentyFourSeven','banana',50);
 ```
 - Add an image for your item in `html/img` folder
 - Add path to the image into `__resource.lua` file like other images
