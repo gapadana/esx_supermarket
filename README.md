@@ -22,3 +22,7 @@ If you already have esx_shops, just stop esx_shops( and remove it from server.cf
 ```
 start esx_supermarket
 ```
+
+## ScreenShot
+
+![alt text](https://raw.githubusercontent.com/gapadana/esx_supermarket/master/screenshot/screenshot.jpg)
