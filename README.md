@@ -19,7 +19,6 @@ git clone https://github.com/gapadana/esx_supermarket [esx]/esx_supermarket
 If you already have esx_shops, just stop esx_shops( and remove it from server.cfg) and start esx_supermarket( and add it to server.cfg), otherwise:
 - Import `esx_shops.sql` to your database
 - Add `start esx_supermarket` in your `server.cfg`:
--
 ```
 start esx_supermarket
 ```
@@ -34,9 +33,12 @@ start esx_supermarket
 	INSERT INTO `shops` (store, item, price) VALUES ('TwentyFourSeven','banana',50),
 ```
 - Add an image for your item in `html/img` folder
-- Add path to the image into `__resource.lua` file
-- Restart the resource
-
+- Add path to the image into `__resource.lua` file like other images
+- Restart the resource:
+```
+refresh
+restart esx_supermarket
+```
 
 ## ScreenShot
 
