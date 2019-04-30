@@ -18,7 +18,18 @@ git clone https://github.com/gapadana/esx_supermarket [esx]/esx_supermarket
 If you already have esx_shops, just stop esx_shops( and remove it from server.cfg) and start esx_supermarket( and add it to server.cfg), otherwise:
 - Import `esx_shops.sql` to your database
 - Add `start esx_supermarket` in your `server.cfg`:
-
+How to add your items in the shop"
+- Add items to the database:
+```mysql
+	INSERT INTO `items` (`name`, `label`, `limit`) VALUES ('banana', 'Banana', 10);
+```
+- Add items to the shop:
+```mysql
+	INSERT INTO `shops` (store, item, price) VALUES ('TwentyFourSeven','banana',50),
+```
+- Add an image for your item in `html/img` folder
+- Add path to the image into `__resource.lua` file
+- Restart the resource
 ```
 start esx_supermarket
 ```
