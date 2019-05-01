@@ -53,7 +53,7 @@ function LoadShop()
 	end
 end
 
-ESX.RegisterServerCallback('esx_supermarket:requestDBItems', function(source, cb)
+ESX.RegisterServerCallback('esx_shops:requestDBItems', function(source, cb)
 	if not hasSqlRun then
 		TriggerClientEvent('esx:showNotification', source, 'The shop database has not been loaded yet, try again in a few moments.')
 	end
@@ -61,8 +61,8 @@ ESX.RegisterServerCallback('esx_supermarket:requestDBItems', function(source, cb
 	cb(ShopItems)
 end)
 
-RegisterServerEvent('esx_supermarket:buyItem')
-AddEventHandler('esx_supermarket:buyItem', function(itemName, amount, zone)
+RegisterServerEvent('esx_shops:buyItem')
+AddEventHandler('esx_shops:buyItem', function(itemName, amount, zone)
 	local _source = source
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	local sourceItem = xPlayer.getInventoryItem(itemName)
@@ -71,7 +71,7 @@ AddEventHandler('esx_supermarket:buyItem', function(itemName, amount, zone)
 
 	-- is the player trying to exploit?
 	if amount < 0 then
-		print('esx_supermarket: ' .. xPlayer.identifier .. ' attempted to exploit the shop!')
+		print('esx_shops: ' .. xPlayer.identifier .. ' attempted to exploit the shop!')
 		return
 	end
 

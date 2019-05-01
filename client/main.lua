@@ -15,7 +15,7 @@ Citizen.CreateThread(function()
 	Citizen.Wait(5000)
 	PlayerData = ESX.GetPlayerData()
 
-	ESX.TriggerServerCallback('esx_supermarket:requestDBItems', function(ShopItems)
+	ESX.TriggerServerCallback('esx_shops:requestDBItems', function(ShopItems)
 		for k,v in pairs(ShopItems) do
 			if (Config.Zones[k] ~= nil) then
 				Config.Zones[k].Items = v
@@ -58,13 +58,13 @@ function OpenShopMenu(zone)
 
 end
 
-AddEventHandler('esx_supermarket:hasEnteredMarker', function(zone)
+AddEventHandler('esx_shops:hasEnteredMarker', function(zone)
 	CurrentAction     = 'shop_menu'
 	CurrentActionMsg  = _U('press_menu')
 	CurrentActionData = {zone = zone}
 end)
 
-AddEventHandler('esx_supermarket:hasExitedMarker', function(zone)
+AddEventHandler('esx_shops:hasExitedMarker', function(zone)
 	CurrentAction = nil
 	ESX.UI.Menu.CloseAll()
 end)
@@ -122,11 +122,11 @@ Citizen.CreateThread(function()
 		end
 		if isInMarker and not HasAlreadyEnteredMarker then
 			HasAlreadyEnteredMarker = true
-			TriggerEvent('esx_supermarket:hasEnteredMarker', currentZone)
+			TriggerEvent('esx_shops:hasEnteredMarker', currentZone)
 		end
 		if not isInMarker and HasAlreadyEnteredMarker then
 			HasAlreadyEnteredMarker = false
-			TriggerEvent('esx_supermarket:hasExitedMarker', LastZone)
+			TriggerEvent('esx_shops:hasExitedMarker', LastZone)
 		end
 	end
 end)
@@ -172,6 +172,6 @@ RegisterNUICallback('quit', function(data, cb)
 end)
 
 RegisterNUICallback('purchase', function(data, cb)
-	TriggerServerEvent('esx_supermarket:buyItem', data.item, data.count, data.loc)
+	TriggerServerEvent('esx_shops:buyItem', data.item, data.count, data.loc)
 	cb('ok')
 end)
