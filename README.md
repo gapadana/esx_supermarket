@@ -1,4 +1,4 @@
-<a href=""><img src="https://img.shields.io/endpoint.svg?url=" alt="Patreon donate button" /> </a>
+<a href=""><img src="https://img.shields.io/badge/Patreon-Donate-orange.svg" alt="Patreon donate button" /> </a>
 
 # esx_supermarket
 
