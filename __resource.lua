@@ -10,7 +10,8 @@ files {
 	'html/scripts.js',
 	'html/debounce.min.js',
 	'html/iransans.otf',
-	
+	-- default
+	'html/img/default.png',
 	'html/img/bread.png',
 	'html/img/fixkit.png',
 	'html/img/soda.png',
