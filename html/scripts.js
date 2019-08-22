@@ -37,7 +37,7 @@ window.addEventListener('message', function (event) {
 	
 	if (item.message == "add"){
 		$( ".home" ).append('<div class="card">' +
-					'<img src="img/' + item.item + '.png" alt="' + item.label + '" style="width:100%">' + 
+					'<img src="img/' + item.item + '.png" onerror="this.src = \'img/default.png\'" alt="' + item.label + '" style="width:100%">' + 
 					'<div class="container">' + 
 						'<h4><b>' + item.label + '</b></h4> ' +
 						'<div class="quantity">' + 
