@@ -18,7 +18,7 @@ html {
 }
 
 body{
-	display: none;
+	/* display: none; */
 	color: #a8a8aa;
 }
 
@@ -33,6 +33,23 @@ body{
   margin-top: 5px;
   
   padding: 1.5%;
+}
+
+.image-holder {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+}
+
+.image-holder img {
+	position: absolute;
+	max-width:100%;
+	max-height:100%;
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .purchase{
@@ -73,7 +90,7 @@ body{
 	width: 100%;
 	/* padding-left: 20px; */
 	padding-right: 20px;
-	margin-top: 5px;
+	/* margin-top: 5px; */
 	/* margin-left: auto; */
 }
 
@@ -99,7 +116,8 @@ body{
  
 h4{
 	text-align:center;
-	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 0;
 }
  
 .btnquantity {
