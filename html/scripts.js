@@ -37,9 +37,11 @@ window.addEventListener('message', function (event) {
 	
 	if (item.message == "add"){
 		$( ".home" ).append('<div class="card">' +
-					'<img src="img/' + item.item + '.png" onerror="this.src = \'img/default.png\'" alt="' + item.label + '" style="width:100%">' + 
+					'<div class="image-holder">' +
+						'<img src="img/' + item.item + '.png" onerror="this.src = \'img/default.png\'" alt="' + item.label + '" style="width:100%">' + 
+					'</div>' +
 					'<div class="container">' + 
-						'<h4><b>' + item.label + '</b></h4> ' +
+						'<h4><b>' + item.label + '<div class="price">' + item.price + '$' + '</div>' + '</b></h4> ' +
 						'<div class="quantity">' + 
 							'<div class="minus-btn btnquantity" name="' + item.item + '" id="minus">' + 
 								'<img src="img/minus.png" alt="" />' + 
@@ -50,7 +52,7 @@ window.addEventListener('message', function (event) {
 							'</div>' +
 						'</div>' +
 						'<div class="purchase">' + 
-							'<div class="price">' + item.price + '$' + '</div>' +
+							
 							'<div class="buy" name="' + item.item + '">Buy</div>' + 
 						'</div>' +
 					'</div>' +
