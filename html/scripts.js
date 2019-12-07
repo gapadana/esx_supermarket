@@ -34,37 +34,37 @@ window.addEventListener('message', function (event) {
 	if (item.message == "hide") {
 		closeMain();
 	}
-	
+
 	if (item.message == "add"){
 		$( ".home" ).append('<div class="card">' +
 					'<div class="image-holder">' +
-						'<img src="img/' + item.item + '.png" onerror="this.src = \'img/default.png\'" alt="' + item.label + '" style="width:100%">' + 
+						'<img src="img/' + item.item + '.png" onerror="this.src = \'img/default.png\'" alt="' + item.label + '" style="width:100%">' +
 					'</div>' +
-					'<div class="container">' + 
+					'<div class="container">' +
 						'<h4><b>' + item.label + '<div class="price">' + item.price + '$' + '</div>' + '</b></h4> ' +
-						'<div class="quantity">' + 
-							'<div class="minus-btn btnquantity" name="' + item.item + '" id="minus">' + 
-								'<img src="img/minus.png" alt="" />' + 
+						'<div class="quantity">' +
+							'<div class="minus-btn btnquantity" name="' + item.item + '" id="minus">' +
+								'<img src="img/minus.png" alt="" />' +
 							'</div>' +
-							'<div class="number" name="name">1</div>' + 
-							'<div class="plus-btn btnquantity" name="' + item.item + '" id="plus">' + 
-								'<img src="img/plus.png" alt="" />' + 
+							'<div class="number" name="name">1</div>' +
+							'<div class="plus-btn btnquantity" name="' + item.item + '" id="plus">' +
+								'<img src="img/plus.png" alt="" />' +
 							'</div>' +
 						'</div>' +
-						'<div class="purchase">' + 
-							
-							'<div class="buy" name="' + item.item + '">Buy</div>' + 
+						'<div class="purchase">' +
+
+							'<div class="buy" name="' + item.item + '">Buy</div>' +
 						'</div>' +
 					'</div>' +
 				'</div>');
 		prices[item.item] = item.price;
-		maxes[item.item] = item.max;
+		maxes[item.item] = 99;
 		zone = item.loc;
 	}
 });
 
 $(".home").on("click", ".btnquantity", function() {
-	
+
 	var $button = $(this);
 	var $name = $button.attr('name')
 	var oldValue = $button.parent().find(".number").text();
