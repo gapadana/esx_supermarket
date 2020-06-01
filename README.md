@@ -28,7 +28,7 @@ start esx_supermarket
 ### How to add your items in the shop
 - Add items to the database:
 ```mysql
-	INSERT INTO `items` (`name`, `label`, `limit`) VALUES ('banana', 'Banana', 10);
+	INSERT INTO `items` (`name`, `label`, `weight`) VALUES ('banana', 'Banana', 10);
 ```
 - Add items to the shop:
 ```mysql
