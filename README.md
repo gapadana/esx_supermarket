@@ -1,5 +1,3 @@
-<a href="https://www.patreon.com/vidat"><img src="https://img.shields.io/badge/Patreon-Donate-orange.svg" alt="Patreon donate button" /> </a>
-
 # esx_supermarket
 
 This resource based on esx_shops, I just changed the UI.
